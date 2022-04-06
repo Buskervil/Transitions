@@ -1,0 +1,302 @@
+/* clear default */
+html{
+    box-sizing: border-box;
+    font-family: "M";
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li{
+                 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/* clear default end */
+
+/* raleway-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/raleway-v26-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/raleway-v26-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+  
+  /* raleway-600 - latin_cyrillic */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+        url('../fonts/raleway-v26-latin_cyrillic-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/raleway-v26-latin_cyrillic-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+  
+  /* raleway-800 - latin_cyrillic */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    src: local(''),
+        url('../fonts/raleway-v26-latin_cyrillic-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/raleway-v26-latin_cyrillic-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+  
+ 
+@keyframes bodyOpacityAnimation{
+    from{
+        opacity: 0;
+        transform: scale(150%) rotate(90deg);
+    }
+    to{
+        opacity: 100%;
+        transform: scale(100%) rotate(0);    
+    }
+}
+
+body{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 400;
+    color: black;
+    transition-duration: 1s;
+    animation: bodyOpacityAnimation 1s;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+/* header style begin */
+.header{
+    color: white;
+    font-size: 22px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition-duration: .5s;
+    z-index: 10;
+}
+
+.header__wraper{    
+    max-width: 1400px;
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav{
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.header__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__item{
+    list-style: none;
+    margin-right: 40px;
+}
+
+.header__item:last-child{
+    margin-right: 0;
+}
+
+.header__nav-link, .header__nav-link::after{
+    text-decoration: none;
+    color: #ffffff;
+    transition-duration: .5s;
+}
+
+.header__nav-link:hover, .header__nav-link:active{
+    color:rgb(45, 186, 252);
+}
+
+.background-transparent{
+    background-color: #00000057;
+    color: black;
+}
+/* header style end */
+
+
+/*intro style begin */
+.intro{
+    background: url(/video/video-s.mp4) no-repeat center;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.intro__video-wraper{
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.intro__video{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    z-index: -1000; 
+    overflow: hidden;
+}
+
+.intro__wraper{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 400px;
+    z-index: 2;
+}
+
+.intro__header{
+    max-width: 865px;
+    margin-bottom: 16px;
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 98px;
+    color: #ffffff;
+    text-shadow: 3px 6px 11px #000000a8;
+    transition-duration: 1s;
+    opacity: 100%;
+}
+
+@keyframes opacityAnimation {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+.animation-header{
+    transition-duration: 1s;
+}
+
+.hide{
+    opacity: 0;
+}
+/* intro style end */
+
+/* blocks style begin */
+@keyframes blockActiveAnimation {
+    from{
+        opacity: 0%;
+        transform: translate(0, 100px);
+    }
+    to{
+        opacity: 100%;
+        transform: translate(0, 0);
+    }
+}
+
+.block{
+    opacity: 0%;
+    height: 800px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    transition: 1s;
+    transform: translate(0, 100px);
+}
+
+.active{
+    animation-name: blockActiveAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.block-1{
+    margin-top: 400px;
+}
+
+.content-wraper{
+    overflow: hidden;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-image{
+    width: 100%;
+    object-fit: cover;
+    transition-duration: .5s;
+}
+
+.content-image:hover{
+    margin-right: 0;
+    margin-left: 0;
+    transform: scale(1.05,1.05);
+    height: auto;
+    cursor: url(/img/cursor.png.svg) 50 50, auto;
+}
+/* block-1 style end */
+
+/* cart-block style begin */
+.cart-block{
+    margin-bottom: 60px;
+}
+
+.cart{
+    height: 600px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    transition-duration: 1s;
+}
+
+.cart-1{
+    background: url(/img/sahalin-1.jpg) no-repeat center;
+}
+
+.cart-2{
+    background: url(/img/sahalin-2.jpg) no-repeat center;
+}
+
+.cart-3{
+    background: url(/img/sahalin-3.jpg);
+}
+
+.appeearing-text{
+    padding:100px 20px;
+    margin-bottom: 0;
+    margin-top: auto;
+    background-color: #ffffffb6;
+    backdrop-filter: blur(2px);
+
+    transform: translate(0px, 20px) rotate(1deg);
+    opacity: 0;
+
+    transition-duration: .2s;
+}
+/* cart-block style end */
+

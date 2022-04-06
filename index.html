@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header__wraper">
+            <div class="header__logo">
+                <a href="/" class="header__self-link">
+                    <img src="" alt="Реж-лого" class="header__logo-pic">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="#" class="header__nav-link">История</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__nav-link">Достопримечательности</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__nav-link">Производство</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__nav-link">Вакансии</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="/map.html" class="header__nav-link">Карта</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__nav-link">Игра</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">        
+        <div class="intro">   
+            <div class="intro__video-wraper">
+                <video class="intro__video" autoplay muted loop>
+                    <source src="/video/video-s.mp4" type="video/mp4">
+                </video>
+            </div>                    
+            <div class="intro__wraper">
+                <h1 class="intro__header">Реж<span class="animation-header"> - город возможностей</span></h1>    
+            </div>
+        </div>
+        <div class="block block-1 scroll-reveal">
+            <div class="content-wraper scroll-reveal">
+                <img class="content-image" src="/img/island-1.webp" alt="">
+            </div>            
+            <p>
+                Какой-то текст
+            </p>
+        </div>
+        <div class="block block-2 scroll-reveal">
+            <div class="content-wraper">
+                <img class="content-image" src="/img/island-2.jpg" alt="">
+            </div>            
+        </div>
+        <div class="block block-3 scroll-reveal">
+            <div class="content-wraper">
+                <img class="content-image" src="/img/island-3.jpg" alt="">
+            </div>            
+        </div>
+        <div class="block block-3 scroll-reveal">
+            <div class="content-wraper">
+                <img class="mouse-parallax" src="/img/island-4.jpg" alt="">
+            </div>            
+        </div>
+        <div class="cart-block">
+            <div class="content-wraper">
+                <div class="cart cart-1">
+                    <div class="appeearing-text">
+                        Какой-то текст появляющийся только при наведении курсора
+                    </div>
+                </div>
+                <div class="cart cart-2">
+                    <div class="appeearing-text">
+                        Какой-то текст появляющийся только при наведении курсора
+                    </div>
+                </div>
+                <div class="cart cart-3">
+                    <div class="appeearing-text">
+                        Какой-то текст появляющийся только при наведении курсора
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/scripts/scrollTrigger.js"></script>
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/scroll-header.js"></script>
+    <script src="/scripts/onImage_mouseMove.js"></script>
+    <script src="/scripts/appearing-text.js"></script>
+    <script src="/scripts/linkAnimation.js"></script>
+</body>
+</html>
